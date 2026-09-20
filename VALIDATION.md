@@ -27,3 +27,11 @@ The GitHub Actions workflow is prepared with read-only repository permissions an
 At the pre-publication checkpoint, remote CI had not run: there was no public repository, push or Draft PR. The Linux namespace execution path was not exercised on the macOS host. Local successful replay does not imply remote CI success. Publication-time results are recorded below only after the actual remote run completes.
 
 No inference, SFT, CUDA test, GPU job, new checkpoint, model download, paid call or benchmark improvement was performed in this packaging task. Calibration and stable generalization remain unproven. The owner authorized publication on 2026-09-20 with the scope and licenses in `PUBLICATION.md`; no automatic PR merge is authorized.
+
+## Publication-time remote evidence
+
+The approved public repository is [haimuhaimu/ab-conclusion-replay](https://github.com/haimuhaimu/ab-conclusion-replay), with the complete 22-file release in [Draft PR #1](https://github.com/haimuhaimu/ab-conclusion-replay/pull/1). The original reviewed commit `4f5b0d1` remains in its history; `main` is only the empty review bootstrap, not a merged release.
+
+The [first push CI run](https://github.com/haimuhaimu/ab-conclusion-replay/actions/runs/35500757188) completed successfully for commit `aed1654a5c92fd967f5e14d5fe6db52de0feb6e8` on 2026-09-20. Its logs show Ubuntu 24.04.5, Python 3.12.3, all 34 tests passing, and `PASS: all report bytes match; historical metrics match.` Both test and replay commands actually ran under `sudo -n unshare --net` with Python `-S`. This closes the previously unverified Linux/network-namespace execution path; it does not expand the scientific claims.
+
+This paragraph is a documentation-only addition after that run. For subsequent commits, use the PR's current checks rather than assuming an earlier run covers the latest revision. PR merge remains a separate owner decision.
