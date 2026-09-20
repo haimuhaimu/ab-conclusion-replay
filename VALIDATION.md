@@ -24,6 +24,6 @@ The reviewer is a software review agent, not an expert statistical adjudicator o
 
 The GitHub Actions workflow is prepared with read-only repository permissions and a pinned official checkout action (v4 SHA verified on 2026-09-20). It uses the Ubuntu runner's Python, disables site-packages, and runs tests/replay inside a network namespace after checkout. It installs no model or Python packages.
 
-**Remote CI has not run:** no public repository, push or Draft PR exists yet. The Linux namespace execution path has not been exercised on this macOS host. Local successful replay does not imply remote CI success. CI failures must be kept visible and fixed before claiming a passing remote build.
+At the pre-publication checkpoint, remote CI had not run: there was no public repository, push or Draft PR. The Linux namespace execution path was not exercised on the macOS host. Local successful replay does not imply remote CI success. Publication-time results are recorded below only after the actual remote run completes.
 
-No inference, SFT, CUDA test, GPU job, new checkpoint, model download, paid call or benchmark improvement was performed in this packaging task. Calibration and stable generalization remain unproven. Publication still requires the owner decision described in `PUBLICATION.md`.
+No inference, SFT, CUDA test, GPU job, new checkpoint, model download, paid call or benchmark improvement was performed in this packaging task. Calibration and stable generalization remain unproven. The owner authorized publication on 2026-09-20 with the scope and licenses in `PUBLICATION.md`; no automatic PR merge is authorized.

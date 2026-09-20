@@ -57,6 +57,6 @@ if (row.get("gold_category") != case["category"]
 
 目的不是“让评测顺利跑完”，而是在样本错位、gold 改写时停止。原始回答每次重新解析；文件里的缓存解析只用于交叉检查。延伸阅读 [tests/test_scoring.py](tests/test_scoring.py) 和 [tests/test_replay.py](tests/test_replay.py)。
 
-## 发布状态
+## 发布与许可
 
-这是待确认发布范围与许可证的隔离候选包。没有创建公共仓库、推送或合并 PR；也没有改变任何私有仓库可见性。候选白名单和许可证建议见 [PUBLICATION.md](PUBLICATION.md)。
+公开范围已获作者确认：22 个文件，经 Draft PR 提交，不自动合并，也不改变任何私有仓库可见性。代码与原创文档采用 MIT，合成 benchmark 采用 CC BY 4.0；许可只涵盖作者有权授权的内容，原始模型输出保留来源说明，不涵盖上游权重。正式许可文本、数据署名和精确白名单见 [PUBLICATION.md](PUBLICATION.md)。CI 的实际验证状态见 [VALIDATION.md](VALIDATION.md)。
