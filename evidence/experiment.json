@@ -1,0 +1,118 @@
+{
+  "base": {
+    "completed_at": "2026-08-30T17:30:12.343932+00:00",
+    "dataset_sha256": "4f609df57f42c239307b25e639da9667e34f929370762a575e3d046a7b696b86",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 192,
+      "use_cache": true
+    },
+    "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "prediction_count": 120,
+    "run_id": "base-20260831-qwen25-05b",
+    "seed": 42,
+    "stage": "base",
+    "started_at": "2026-08-30T17:23:07.257512+00:00",
+    "status": "completed",
+    "training_run": null
+  },
+  "benchmark_seed": 44000,
+  "benchmark_version": "benchmark_v1",
+  "generator_version": "1.0.0",
+  "limitations": [
+    "Train and benchmark share category builders; split-prefixed template names do not establish template isolation.",
+    "Synthetic numeric statements were not recomputed from raw observations; labels are generator labels, not an expert-reviewed statistical gold standard.",
+    "The prompt defines confidence as correctness probability, but every training target is 1.0; this is a flawed confidence supervision design.",
+    "One seed, one 100-row smoke run; performance cannot establish stable generalization."
+  ],
+  "lora": {
+    "completed_at": "2026-08-30T17:45:07.517892+00:00",
+    "dataset_sha256": "4f609df57f42c239307b25e639da9667e34f929370762a575e3d046a7b696b86",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 192,
+      "use_cache": true
+    },
+    "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "prediction_count": 120,
+    "run_id": "smoke-lora-full-eval-20260831-qwen25-05b",
+    "seed": 42,
+    "stage": "adapter",
+    "started_at": "2026-08-30T17:40:35.630813+00:00",
+    "status": "completed",
+    "training_run": "smoke-lora-full-20260831-qwen25-05b"
+  },
+  "original_hardware": "Apple M3 Pro via PyTorch MPS; no CUDA QLoRA run",
+  "original_packages": {
+    "accelerate": "1.7.0",
+    "datasets": "3.6.0",
+    "peft": "0.15.2",
+    "torch": "2.7.1",
+    "transformers": "4.51.3",
+    "trl": "0.18.1"
+  },
+  "scope": "recompute saved predictions only; no weights or runtime dependencies",
+  "source_code_hashes": {
+    "src/abjudge/data_generation.py": "05ed586ec5b45578cdcd1c3ed9791fdf94c7d73ce5096ce513385f8bb3aea9a7",
+    "src/abjudge/metrics.py": "e442e14c0bed00953281423e089b975f90c387d1043083f1faf31a2e947ef445",
+    "src/abjudge/prompting.py": "1c1b20b04766a4bbc1dfbddb52dd4d92b4028780d808c0806caf050e85f5f1ca",
+    "src/abjudge/schema.py": "cf0439dae8f901603115006463a66e7568690c5e38dd2509c27c92f064df025b"
+  },
+  "sources": {
+    "base.predictions.jsonl": {
+      "original_relative_path": "runs/base-20260831-qwen25-05b/predictions.jsonl",
+      "sha256": "25f4e417819bf0bd1edd6fa8e9f2716c84cc3e72ba2dfaf94ba446c8c779b510"
+    },
+    "benchmark.jsonl": {
+      "original_relative_path": "data/benchmark_v1.jsonl",
+      "sha256": "4f609df57f42c239307b25e639da9667e34f929370762a575e3d046a7b696b86"
+    },
+    "historical_base.metrics.json": {
+      "original_relative_path": "runs/base-20260831-qwen25-05b/evaluation/metrics.json",
+      "sha256": "e6090769ec0cb54afe984125c8584dfbc754ff127ffcfa771322d3e0d7d94c38"
+    },
+    "historical_lora.metrics.json": {
+      "original_relative_path": "runs/smoke-lora-full-eval-20260831-qwen25-05b/evaluation/metrics.json",
+      "sha256": "cf7d27b648368ca93c8e34e1da8d45a56e4b229055339b414b9d5c96ed299c26"
+    },
+    "lora.predictions.jsonl": {
+      "original_relative_path": "runs/smoke-lora-full-eval-20260831-qwen25-05b/predictions.jsonl",
+      "sha256": "7e121d8dc79ead2f180d49dfca0d6b35230f6395b19f7057bfe28a8043d5c943"
+    }
+  },
+  "training": {
+    "benchmark_sha256": "4f609df57f42c239307b25e639da9667e34f929370762a575e3d046a7b696b86",
+    "completed_at": "2026-08-30T17:40:12.869941+00:00",
+    "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "resolved_config": {
+      "expected_train_rows": 100,
+      "gradient_accumulation_steps": 5,
+      "gradient_checkpointing": false,
+      "learning_rate": 0.0001,
+      "logging_steps": 1,
+      "lora": {
+        "alpha": 32,
+        "dropout": 0.05,
+        "rank": 16
+      },
+      "max_length": 768,
+      "num_train_epochs": 1,
+      "per_device_eval_batch_size": 1,
+      "per_device_train_batch_size": 1,
+      "quantization": "none",
+      "run_kind": "smoke",
+      "seed": 42,
+      "warmup_ratio": 0.03,
+      "weight_decay": 0.0
+    },
+    "run_id": "smoke-lora-full-20260831-qwen25-05b",
+    "started_at": "2026-08-30T17:38:47.630366+00:00",
+    "status": "completed",
+    "train_sha256": "348309c74f4f445e890371c916a71d325eff9934cdcbbd4698b3fb984d82aa0d",
+    "validation_sha256": "31d3f6b38cb310223f9a386f6f44b338667fa6d389256d6f9efb388b1c406bd2"
+  },
+  "version": "abjudge-replay-1"
+}

@@ -1,0 +1,30 @@
+{
+  "bundle_version": "abjudge-replay-1",
+  "files": {
+    "base.predictions.jsonl": {
+      "bytes": 64277,
+      "sha256": "25f4e417819bf0bd1edd6fa8e9f2716c84cc3e72ba2dfaf94ba446c8c779b510"
+    },
+    "benchmark.jsonl": {
+      "bytes": 115153,
+      "sha256": "4f609df57f42c239307b25e639da9667e34f929370762a575e3d046a7b696b86"
+    },
+    "experiment.json": {
+      "bytes": 4911,
+      "sha256": "115f40601355c95bb0600f3f096259714464474ad9872aa2920bc53481f58de5"
+    },
+    "historical_base.metrics.json": {
+      "bytes": 1738,
+      "sha256": "e6090769ec0cb54afe984125c8584dfbc754ff127ffcfa771322d3e0d7d94c38"
+    },
+    "historical_lora.metrics.json": {
+      "bytes": 2242,
+      "sha256": "cf7d27b648368ca93c8e34e1da8d45a56e4b229055339b414b9d5c96ed299c26"
+    },
+    "lora.predictions.jsonl": {
+      "bytes": 61681,
+      "sha256": "7e121d8dc79ead2f180d49dfca0d6b35230f6395b19f7057bfe28a8043d5c943"
+    }
+  },
+  "rows": 120
+}

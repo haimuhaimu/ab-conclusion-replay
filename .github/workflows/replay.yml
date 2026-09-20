@@ -1,0 +1,18 @@
+name: Offline result replay
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4, verified 2026-09-20
+        with:
+          persist-credentials: false
+      - name: Show available Python
+        run: python3 --version
+      - name: Test and recompute without site-packages or network access
+        run: |
+          sudo -n unshare --net python3 -S -m unittest discover -s tests -v
+          sudo -n unshare --net python3 -S replay.py --check reports

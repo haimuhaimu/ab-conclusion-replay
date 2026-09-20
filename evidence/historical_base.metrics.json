@@ -1,0 +1,75 @@
+{
+  "count": 120,
+  "correct": 0,
+  "overall_accuracy": 0.0,
+  "per_category_accuracy": {
+    "insufficient_sample_size": 0.0,
+    "statistically_insignificant": 0.0,
+    "simpsons_paradox": 0.0,
+    "selection_bias": 0.0,
+    "confounding": 0.0,
+    "metric_mismatch": 0.0,
+    "data_leakage": 0.0,
+    "correlation_vs_causation": 0.0,
+    "experiment_contamination": 0.0,
+    "valid_conclusion": 0.0
+  },
+  "per_category_support": {
+    "insufficient_sample_size": 12,
+    "statistically_insignificant": 12,
+    "simpsons_paradox": 12,
+    "selection_bias": 12,
+    "confounding": 12,
+    "metric_mismatch": 12,
+    "data_leakage": 12,
+    "correlation_vs_causation": 12,
+    "experiment_contamination": 12,
+    "valid_conclusion": 12
+  },
+  "macro_f1": 0.0,
+  "structured_output_validity": 0.0,
+  "validity_accuracy": 0.0,
+  "diagnostic_recoverable_json": 1.0,
+  "diagnostic_category_accuracy": 0.2,
+  "diagnostic_validity_accuracy": 0.5333333333333333,
+  "diagnostic_joint_accuracy": 0.0,
+  "calibration_coverage": 0.0,
+  "ece_10": null,
+  "brier_score": null,
+  "confusion_matrix": {
+    "insufficient_sample_size": {
+      "__invalid__": 12
+    },
+    "statistically_insignificant": {
+      "__invalid__": 12
+    },
+    "simpsons_paradox": {
+      "__invalid__": 12
+    },
+    "selection_bias": {
+      "__invalid__": 12
+    },
+    "confounding": {
+      "__invalid__": 12
+    },
+    "metric_mismatch": {
+      "__invalid__": 12
+    },
+    "data_leakage": {
+      "__invalid__": 12
+    },
+    "correlation_vs_causation": {
+      "__invalid__": 12
+    },
+    "experiment_contamination": {
+      "__invalid__": 12
+    },
+    "valid_conclusion": {
+      "__invalid__": 12
+    }
+  },
+  "overall_accuracy_ci95": [
+    0.0,
+    0.0
+  ]
+}
