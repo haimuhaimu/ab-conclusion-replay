@@ -1,0 +1,84 @@
+{
+  "count": 120,
+  "correct": 22,
+  "overall_accuracy": 0.18333333333333332,
+  "per_category_accuracy": {
+    "insufficient_sample_size": 1.0,
+    "statistically_insignificant": 0.0,
+    "simpsons_paradox": 0.0,
+    "selection_bias": 0.0,
+    "confounding": 0.0,
+    "metric_mismatch": 0.0,
+    "data_leakage": 0.4166666666666667,
+    "correlation_vs_causation": 0.4166666666666667,
+    "experiment_contamination": 0.0,
+    "valid_conclusion": 0.0
+  },
+  "per_category_support": {
+    "insufficient_sample_size": 12,
+    "statistically_insignificant": 12,
+    "simpsons_paradox": 12,
+    "selection_bias": 12,
+    "confounding": 12,
+    "metric_mismatch": 12,
+    "data_leakage": 12,
+    "correlation_vs_causation": 12,
+    "experiment_contamination": 12,
+    "valid_conclusion": 12
+  },
+  "macro_f1": 0.14191176470588235,
+  "structured_output_validity": 0.9833333333333333,
+  "validity_accuracy": 0.9,
+  "diagnostic_recoverable_json": 1.0,
+  "diagnostic_category_accuracy": 0.18333333333333332,
+  "diagnostic_validity_accuracy": 0.9166666666666666,
+  "diagnostic_joint_accuracy": 0.18333333333333332,
+  "calibration_coverage": 0.9833333333333333,
+  "ece_10": 0.8135593220338984,
+  "brier_score": 0.8135593220338984,
+  "confusion_matrix": {
+    "insufficient_sample_size": {
+      "insufficient_sample_size": 12
+    },
+    "statistically_insignificant": {
+      "data_leakage": 2,
+      "insufficient_sample_size": 10
+    },
+    "simpsons_paradox": {
+      "data_leakage": 9,
+      "metric_mismatch": 3
+    },
+    "selection_bias": {
+      "data_leakage": 12
+    },
+    "confounding": {
+      "data_leakage": 8,
+      "experiment_contamination": 4
+    },
+    "metric_mismatch": {
+      "data_leakage": 7,
+      "experiment_contamination": 5
+    },
+    "data_leakage": {
+      "data_leakage": 5,
+      "experiment_contamination": 4,
+      "metric_mismatch": 3
+    },
+    "correlation_vs_causation": {
+      "correlation_vs_causation": 5,
+      "data_leakage": 3,
+      "experiment_contamination": 4
+    },
+    "experiment_contamination": {
+      "data_leakage": 12
+    },
+    "valid_conclusion": {
+      "__invalid__": 2,
+      "data_leakage": 10
+    }
+  },
+  "overall_accuracy_ci95": [
+    0.11666666666666667,
+    0.25833333333333336
+  ]
+}

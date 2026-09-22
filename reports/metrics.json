@@ -1,0 +1,218 @@
+{
+  "base": {
+    "brier_score": null,
+    "calibration_coverage": 0.0,
+    "confidence_one_count": 16,
+    "confusion_matrix": {
+      "confounding": {
+        "__invalid__": 12
+      },
+      "correlation_vs_causation": {
+        "__invalid__": 12
+      },
+      "data_leakage": {
+        "__invalid__": 12
+      },
+      "experiment_contamination": {
+        "__invalid__": 12
+      },
+      "insufficient_sample_size": {
+        "__invalid__": 12
+      },
+      "metric_mismatch": {
+        "__invalid__": 12
+      },
+      "selection_bias": {
+        "__invalid__": 12
+      },
+      "simpsons_paradox": {
+        "__invalid__": 12
+      },
+      "statistically_insignificant": {
+        "__invalid__": 12
+      },
+      "valid_conclusion": {
+        "__invalid__": 12
+      }
+    },
+    "correct": 0,
+    "count": 120,
+    "diagnostic_category_accuracy": 0.2,
+    "diagnostic_joint_accuracy": 0.0,
+    "diagnostic_recoverable_json": 1.0,
+    "diagnostic_validity_accuracy": 0.5333333333333333,
+    "ece_10": null,
+    "invalid_gold_prior": 0.9,
+    "json_object_validity": 0.0,
+    "json_schema_compliance": 0.0,
+    "macro_f1": 0.0,
+    "overall_accuracy": 0.0,
+    "overall_accuracy_ci95": [
+      0.0,
+      0.0
+    ],
+    "per_category_accuracy": {
+      "confounding": 0.0,
+      "correlation_vs_causation": 0.0,
+      "data_leakage": 0.0,
+      "experiment_contamination": 0.0,
+      "insufficient_sample_size": 0.0,
+      "metric_mismatch": 0.0,
+      "selection_bias": 0.0,
+      "simpsons_paradox": 0.0,
+      "statistically_insignificant": 0.0,
+      "valid_conclusion": 0.0
+    },
+    "per_category_support": {
+      "confounding": 12,
+      "correlation_vs_causation": 12,
+      "data_leakage": 12,
+      "experiment_contamination": 12,
+      "insufficient_sample_size": 12,
+      "metric_mismatch": 12,
+      "selection_bias": 12,
+      "simpsons_paradox": 12,
+      "statistically_insignificant": 12,
+      "valid_conclusion": 12
+    },
+    "recovered_pair_contradictions": 68,
+    "recovered_prediction_distribution": {
+      "confounding": 47,
+      "correlation_vs_causation": 2,
+      "data_leakage": 59,
+      "selection_bias": 12
+    },
+    "structured_output_validity": 0.0,
+    "validity_accuracy": 0.0
+  },
+  "bootstrap_method": "historical row-IID, seed 42, 2000 samples; parity only",
+  "historical_metrics_match": true,
+  "input_manifest": {
+    "bundle_version": "abjudge-replay-1",
+    "files": {
+      "base.predictions.jsonl": {
+        "bytes": 64277,
+        "sha256": "25f4e417819bf0bd1edd6fa8e9f2716c84cc3e72ba2dfaf94ba446c8c779b510"
+      },
+      "benchmark.jsonl": {
+        "bytes": 115153,
+        "sha256": "4f609df57f42c239307b25e639da9667e34f929370762a575e3d046a7b696b86"
+      },
+      "experiment.json": {
+        "bytes": 4911,
+        "sha256": "115f40601355c95bb0600f3f096259714464474ad9872aa2920bc53481f58de5"
+      },
+      "historical_base.metrics.json": {
+        "bytes": 1738,
+        "sha256": "e6090769ec0cb54afe984125c8584dfbc754ff127ffcfa771322d3e0d7d94c38"
+      },
+      "historical_lora.metrics.json": {
+        "bytes": 2242,
+        "sha256": "cf7d27b648368ca93c8e34e1da8d45a56e4b229055339b414b9d5c96ed299c26"
+      },
+      "lora.predictions.jsonl": {
+        "bytes": 61681,
+        "sha256": "7e121d8dc79ead2f180d49dfca0d6b35230f6395b19f7057bfe28a8043d5c943"
+      }
+    },
+    "rows": 120
+  },
+  "lora": {
+    "brier_score": 0.8135593220338984,
+    "calibration_coverage": 0.9833333333333333,
+    "confidence_one_count": 120,
+    "confusion_matrix": {
+      "confounding": {
+        "data_leakage": 8,
+        "experiment_contamination": 4
+      },
+      "correlation_vs_causation": {
+        "correlation_vs_causation": 5,
+        "data_leakage": 3,
+        "experiment_contamination": 4
+      },
+      "data_leakage": {
+        "data_leakage": 5,
+        "experiment_contamination": 4,
+        "metric_mismatch": 3
+      },
+      "experiment_contamination": {
+        "data_leakage": 12
+      },
+      "insufficient_sample_size": {
+        "insufficient_sample_size": 12
+      },
+      "metric_mismatch": {
+        "data_leakage": 7,
+        "experiment_contamination": 5
+      },
+      "selection_bias": {
+        "data_leakage": 12
+      },
+      "simpsons_paradox": {
+        "data_leakage": 9,
+        "metric_mismatch": 3
+      },
+      "statistically_insignificant": {
+        "data_leakage": 2,
+        "insufficient_sample_size": 10
+      },
+      "valid_conclusion": {
+        "__invalid__": 2,
+        "data_leakage": 10
+      }
+    },
+    "correct": 22,
+    "count": 120,
+    "diagnostic_category_accuracy": 0.18333333333333332,
+    "diagnostic_joint_accuracy": 0.18333333333333332,
+    "diagnostic_recoverable_json": 1.0,
+    "diagnostic_validity_accuracy": 0.9166666666666666,
+    "ece_10": 0.8135593220338984,
+    "invalid_gold_prior": 0.9,
+    "json_object_validity": 1.0,
+    "json_schema_compliance": 1.0,
+    "macro_f1": 0.14191176470588235,
+    "overall_accuracy": 0.18333333333333332,
+    "overall_accuracy_ci95": [
+      0.11666666666666667,
+      0.25833333333333336
+    ],
+    "per_category_accuracy": {
+      "confounding": 0.0,
+      "correlation_vs_causation": 0.4166666666666667,
+      "data_leakage": 0.4166666666666667,
+      "experiment_contamination": 0.0,
+      "insufficient_sample_size": 1.0,
+      "metric_mismatch": 0.0,
+      "selection_bias": 0.0,
+      "simpsons_paradox": 0.0,
+      "statistically_insignificant": 0.0,
+      "valid_conclusion": 0.0
+    },
+    "per_category_support": {
+      "confounding": 12,
+      "correlation_vs_causation": 12,
+      "data_leakage": 12,
+      "experiment_contamination": 12,
+      "insufficient_sample_size": 12,
+      "metric_mismatch": 12,
+      "selection_bias": 12,
+      "simpsons_paradox": 12,
+      "statistically_insignificant": 12,
+      "valid_conclusion": 12
+    },
+    "recovered_pair_contradictions": 2,
+    "recovered_prediction_distribution": {
+      "correlation_vs_causation": 5,
+      "data_leakage": 68,
+      "experiment_contamination": 17,
+      "insufficient_sample_size": 22,
+      "metric_mismatch": 6,
+      "statistically_insignificant": 2
+    },
+    "structured_output_validity": 0.9833333333333333,
+    "validity_accuracy": 0.9
+  },
+  "replay_version": "abjudge-replay-1"
+}
